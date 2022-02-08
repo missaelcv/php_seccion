@@ -14,6 +14,6 @@ session_start();
 <body>
     <a href="sesion.php">Iniciar Seccion</a>
     <a href="protegido.php">Contenido Protegido</a>
-
+    <h2>Bienvenido: <?php echo isset($_SESSION['admin']) ? $_SESSION['admin'] :'Invitado' ?> </h2>
 </body>
 </html>
