@@ -6,11 +6,11 @@ $login = 'Missael';
 $_SESSION['admin']  = $login;
 
 if (isset($_SESSION['admin']) ){
-    echo 'Sesion iniciada';
+    header('Location:index.php');
 }
 
-echo '<br>';
-var_dump($_SESSION);
+// echo '<br>';
+// var_dump($_SESSION);
 
 
 ?>
