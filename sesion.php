@@ -9,8 +9,8 @@ if (isset($_SESSION['admin']) ){
     header('Location:index.php');
 }
 
-// echo '<br>';
-// var_dump($_SESSION);
+echo '<br>';
+var_dump($_SESSION);
 
 
 ?>
