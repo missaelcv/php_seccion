@@ -19,7 +19,8 @@ echo '<pre>';
 if (password_verify($contrasena2, $contrasena)) {
     echo '¡La contraseña es válida! <br>';
 
-   // include_once '../yt_colores/conexion.php';
+    include_once '../form-sesion/conexion.php';
+
 } else {
     echo 'La contraseña no es válida.';
 }
