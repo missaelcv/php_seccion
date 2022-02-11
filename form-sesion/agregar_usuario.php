@@ -19,8 +19,16 @@ echo '<pre>';
 if (password_verify($contrasena2, $contrasena)) {
     echo '¡La contraseña es válida! <br>';
 
-    include_once '../form-sesion/conexion.php';
+    include_once '../yt_colores/conexion.php';
 
+   $sql_agregar= 'INSERT INTO colores (color,descripcion) Value (?, ?)';
+   
+   $sentencia_agregar = $pdo->prepare($sql_agregar);
+   $sentencia_agregar->execute(array($color,$descripcion));
+ 
+   $sentencia_agregar = null;
+   $pdo = null;  
+   header('location:index.php');
 } else {
     echo 'La contraseña no es válida.';
 }
