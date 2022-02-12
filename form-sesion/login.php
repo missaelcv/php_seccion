@@ -19,3 +19,11 @@ $resultado = $sentencia->fetch();
 echo '<pre>';
 var_dump($resultado);
 echo '<pre>';
+
+if(!$resultado) {
+    echo 'no existe usuario';
+
+    die();
+}
+
+    echo 'Usuario Verificado';
